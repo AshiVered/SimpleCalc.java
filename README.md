@@ -4,7 +4,5 @@
 Simple calcture - written in Java
 # Run
 ```
-java SimpleCalc.java
+java Main.java
 ```
-
-# רומ
