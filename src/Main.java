@@ -1,12 +1,14 @@
 /* SimpleCalc.java
    Author: Ashi Vered
-   Version: 1.2
+   Version: 1.3
    Date: 14.7.5784
  */
 
 import java.util.Scanner;
 
+
 public class Main {
+    public static boolean allFix = true;
     public static void main(String[] args) {
         int num1, num2, result;
 // Get input from user - first number
@@ -17,11 +19,15 @@ public class Main {
         print("Please enter the second number:");
         num2 = in.nextInt();
         result = sumNumbers(num1, num2);
-        System.out.println(result);
+        if (allFix) {
+            print("Your resault: " + result);
+        } else {
+            print("Eror, please try again.");
+        }
     }
 
     public static int sumNumbers(int number1, int number2) {
-        int act, sum;
+        int act, sum, count = 0;
 
         // Get input from user - mathematical operation
         Scanner in = new Scanner(System.in);
@@ -30,12 +36,8 @@ public class Main {
         print("Minus (-) : enter 2");
         print("Multiplication (*): enter 3");
         print("division (/) : enter 4");
-
-
-        do {
-            print("Enter operation:");
-            act = in.nextInt();
-        } while (act > 4 || act < 1);
+        print("Enter operation:");
+          act = in.nextInt();
 
         // check operation&calc
         switch(act){
@@ -48,6 +50,7 @@ public class Main {
             case 4:
                 return number1 / number2;
             default:
+                allFix = false;
                 print("Your selection is not correct. the resault is broken.");
                 return 0;
         }
