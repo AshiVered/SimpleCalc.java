@@ -1,7 +1,5 @@
 ![image](https://raw.githubusercontent.com/AshiVered/support-israel-banner/main/assets/support-israel-banner.jpg)
 
-![image](https://raw.githubusercontent.com/AshiVered/support-israel-banner/main/assets/support-israel-banner.jpg)
-
 ![Screenshot](Screenshot.png)
 #LearnLang
 Program that helps practice words in a new language.
