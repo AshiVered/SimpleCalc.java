@@ -27,12 +27,6 @@ public class Main {
         words_orig[8] = "אחיין";
         words_orig[9] = "אחיינית";
 
-
-
-
-
-
-
         //array for new words
         String[] words_new = new String[10];
         //list of new words
@@ -48,10 +42,11 @@ public class Main {
         words_new[9] = "niece";
 
         for (int i = 0; i < 10; i++) {
-            int selectArray = r.nextInt(2);
-            int position = r.nextInt(9);
+            int selectArray = r.nextInt(2); // Randomly decide whether to prompt for a translation from original lang to new lang.
+            int position = r.nextInt(9); // Randomly choose a position in the arrays (i.e. choose which word to display).
             String answer;
                 if (selectArray == 0) {
+                    // show word in original language.
                     String word_orig = words_orig[position];
                     String word_new = words_new[position];
                     System.out.println("the word in Hebrew: " + word_orig);
@@ -65,6 +60,7 @@ public class Main {
                         System.out.println("Real translate is: " + word_new);
                     }
                 } else {
+                    // show word in new language.
                     String word_orig = words_orig[position];
                     String word_new = words_new[position];
                     System.out.println("the word in English: " + word_new);
